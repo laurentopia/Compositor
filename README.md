@@ -6,6 +6,12 @@ The goal was to create a full-featured image editor that is completely free and 
 
 Because it’s open source, you can download the Xcode project and add, remove, or modify any feature to fit your workflow.
 
+## 1.4.10
+
+- Builds with Xcode 16.4 and runs on macOS 15.5 and later, including 15.6.
+- Shift-click in the Layers panel selects every visible row between the first click and the Shift-click. The Shift-clicked row is the active layer. Shift-click on a mask thumbnail still turns that mask on or off.
+- Drawing skips work that was happening again on every frame: the backdrop around the document, effect-preview bookkeeping when the same layers are still there, off-screen squares of a zoomed-out painted layer, a full liquify image on every pointer move, and a full-view grid repaint. Adjustments reuse bitmaps and keep the last result for the same image and settings. Open Recent checks that files exist after a window is up. Frame time was not measured.
+
 ## Installation
 
 ### Download
